@@ -1,0 +1,25 @@
+<%= form_for(@todotwo) do |f| %>
+  <% if @todotwo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@todotwo.errors.count, "error") %> prohibited this todotwo from being saved:</h2>
+
+      <ul>
+      <% @todotwo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :task %><br>
+    <%= f.text_field :task %>
+  </div>
+  <div class="field">
+    <%= f.label :whendue %><br>
+    <%= f.text_field :whendue %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

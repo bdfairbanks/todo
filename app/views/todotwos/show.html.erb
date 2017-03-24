@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Task:</strong>
+  <%= @todotwo.task %>
+</p>
+
+<p>
+  <strong>Whendue:</strong>
+  <%= @todotwo.whendue %>
+</p>
+
+<%= link_to 'Edit', edit_todotwo_path(@todotwo) %> |
+<%= link_to 'Back', todotwos_path %>
